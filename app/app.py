@@ -2,7 +2,7 @@ import sys
 import os
 import streamlit as st
 
-# src folder ko Python path me add karo
+
 sys.path.append(os.path.join(os.path.dirname(__file__), "..", "src"))
 
 from predict import predict_price

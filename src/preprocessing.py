@@ -9,14 +9,14 @@ def load_data(path):
 
 
 def preprocess_data(df):
-    # Drop unnecessary column if exists
+
     if 'name' in df.columns:
         df.drop('name', axis=1, inplace=True)
 
-    # Remove missing values
+    
     df.dropna(inplace=True)
 
-    # Convert categorical to numeric
+    
     df = pd.get_dummies(df, drop_first=True)
 
     return df
